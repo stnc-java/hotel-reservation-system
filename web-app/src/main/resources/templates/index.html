@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="UTF-8">
+	<title>Hotel Reservation System</title>
+	<link rel="stylesheet" th:href="@{css/styles.css}"> 
+    <link rel="icon" th:href="@{assets/hotel-icon-page.png}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<nav class="nav">
+			<div class="branding">
+				<span class="hotel-logo"></span>
+			</div>
+			<div class="nav-options">
+				<a href="">Home</a>
+				<a sec:authorize="isAuthenticated()"  href="/main">Hi,  <span sec:authentication="name"></span></a>
+				<a sec:authorize="!isAuthenticated()" href="/main">Sign in <span class="user-logo"></span></a>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div class="image-container"></div>
+        <div class="presentation-container">
+            <h1>HOTEL RESERVATION SYSTEM</h1>
+			<a href="/main">START</a> 
+        </div>
+	</main>
+</body>
+</html>

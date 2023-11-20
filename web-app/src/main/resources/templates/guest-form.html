@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{css/guest-form.css}">
+    <link rel="icon" th:href="@{assets/hotel-icon-page.png}">
+    <title>Guest's information</title>
+</head>
+<body>
+    <main>
+   		<div class="image-container"></div>
+		<div th:if="${guest} != null">
+			<form class="guest-form" action="/update-guest" method="post" th:object="${guest}">
+				<h1>Update guest</h1>
+				<label for="name">Name</label>
+	            <input type="text" id="name" name="name" th:value="${guest.name}" required>
+	            <label for="email">Email</label>
+	            <input type="text" id="email" name="email" th:value="${guest.email}" required>
+	            <label for="phoneNumber">Phone number</label>
+	            <input type="tel" pattern = "[0-9]{10}" 
+	                   title="A valid phone number consist of 10 digits"
+	                   id="phoneNumber" name="phoneNumber" 
+	                   th:value="${guest.phoneNumber}" required>
+	            <label for="typeGuest">Select type guest</label>
+	            <select id="typeGuest" name="typeGuest" >
+	                <option value="basic">Basic</option>
+	                <option value="plus">Plus</option>
+	            </select>
+	            <div class="date-container">
+	                <div class="check-in-date">
+	                    <label for="checkindate">Check in date</label>
+	                    <input type="date" id="checkInDate" name="checkInDate" th:value="${guest.checkInDate}" required>
+	                </div>
+	                <div class="chek-out-date">
+	                    <label for="checkoutdate">Check out date</label>
+	                    <input type="date" id="checkOutDate" name="checkOutDate" th:value="${guest.checkOutDate}" required>
+	                </div>
+	            </div>
+				<input type="submit" name="save-button" id="save-button" value="Save">
+           		<a href="./main" class="cancel-button">Cancel</a>
+			</form>
+		</div>
+        
+        <div th:if="${guest} == null">
+			<form class="guest-form" method="post" action="/add-guest" th:object="${guest}">
+				<h1>Add new guest</h1>
+				<label for="name">Name</label>
+	            <input type="text" id="name" name="name" required>
+	            <label for="email">Email</label>
+	            <input type="text" id="email" name="email">
+	            <label for="phoneNumber">Phone number</label>
+	            <input type="tel" pattern = "[0-9]{10}" 
+	                   title="A valid phone number consist of 10 digits"
+	                   id="phoneNumber" name="phoneNumber" required>
+	            <label for="typeGuest">Select type guest</label>
+	            <select id="typeGuest" name="typeGuest" >
+	                <option value="basic">Basic</option>
+	                <option value="plus">Plus</option>
+	            </select>
+	            <div class="date-container">
+	                <div class="check-in-date">
+	                    <label for="checkindate">Check in date</label>
+	                    <input type="date" id="checkInDate" name="checkInDate"  required>
+	                </div>
+	                <div class="chek-out-date">
+	                    <label for="checkoutdate">Check out date</label>
+	                    <input type="date" id="checkOutDate" name="checkOutDate"  required>
+	                </div>
+	            </div>
+				<input type="submit" name="save-button" id="save-button" value="Add guest">
+           		<a href="./main" class="cancel-button">Cancel</a>
+			</form>
+		</div>
+    </main>
+</body>
+</html>

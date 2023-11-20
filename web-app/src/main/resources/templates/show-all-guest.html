@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" th:href="@{assets/hotel-icon-page.png}">
+    <link rel="stylesheet" th:href="@{css/show-all-guest.css}">
+    <title>Guest registered</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="branding">
+                <span class="hotel-logo"></span>
+            </div><!-- branding -->
+            <div class="nav-options">
+                <a href="./home">Home</a>
+                <a href="./main">Menu</a>    
+            </div>
+        </nav>
+    </header>
+    <main>
+        <table class="guest-table">
+       		<caption>Current guest</caption>  
+            <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Phone number</th>
+                  <th>Email</th>
+                  <th>Type guest</th>
+                  <th>Check in date</th>
+                  <th>Check out date</th>
+                  <th sec:authorize="hasAnyAuthority('ADMIN')">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+              	<tr th:each="guest: ${guestList}">
+                  <td th:text="${guest.idGuest}"/>
+                  <td th:text="${guest.name}" th:value="${guest.name}" th:field="*{name}" id="name"/>
+                  <td th:text="${guest.phoneNumber}"/>
+                  <td th:text="${guest.email}" />
+                  <td th:text="${guest.typeGuest}" />
+                  <td th:text="${guest.checkInDate}" />
+                  <td th:text="${guest.checkOutDate}" />
+                  <td sec:authorize="hasAnyAuthority('ADMIN')" class="actions-container">
+                    <a th:href="@{/edit-guest-{id}(id=${guest.idGuest})}"><span class="action edit-button" title="Edit"></span></a>
+                    <a th:href="@{/delete-guest-{id}(id=${guest.idGuest})}"><span class="action delete-button" title="Delete"></span></a>
+                  </td>
+	            </tr>
+              </tbody>
+	        </table>
+    </main>
+</body>
+</html>

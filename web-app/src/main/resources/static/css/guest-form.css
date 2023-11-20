@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: whitesmoke;
+}
+body{
+    background-color: azure; 
+    display: flex;
+    justify-content: center;
+}
+main{
+    width: 70vw;
+    height: 80vh;
+    margin-top: 70px; 
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    border-radius: 15px;
+    background: rgba(0,100,100,0.05);
+    box-shadow: 0 0 50px rgba(200, 198, 198, 0.948);
+}
+.image-container{
+    background-image: url(../assets/image-form-user.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-top: 110px;
+    width: 40vw;
+    height: 50vh;
+}
+.guest-form{
+    display: flex;
+    flex-direction: column;
+    height: 475px;
+    margin-top: 45px;
+    margin-left: 40px;
+    max-width: 380px;
+    min-width: 250px;
+    width: 50vw;
+    border-radius: 15px;
+    padding: 30px 30px 10px;
+    background-color: blue;
+}
+h1{
+    margin-bottom: 12px;
+    font-size: 3.2rem;
+    text-align: center;
+}
+.guest-form label{
+    font-size: 1.6rem;
+    margin-bottom: 3px;
+}
+.guest-form input, select{
+    height: 30px;
+    background-color:gainsboro;
+    border-style: none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+.guest-form > input:focus{
+    border: 1px solid rgb(236, 237, 242);
+    box-shadow: 0 0 3px rgb(55, 99, 255);
+    transform: scale(1.02);
+}
+.date-container{
+    display:flex;
+    justify-content: space-between;
+}
+.date-container input{
+    margin-top: 5px;
+    padding-right: 0;
+    margin-right: 0;
+    width: 18vw;
+    max-width: 11vw;
+    min-width: 105px;
+}
+.check-in-date {
+    margin-right: 15px;
+}
+.check-in-date .check-out-date{
+    display:flex;
+    flex-direction: column;
+}
+select{
+    font-size: 1.4rem;
+}
+#save-button{
+    background-color: #b4f042;
+    color: black;
+    font-size: 1.6rem;
+    height: 35px;
+    transition: 0.5s;
+}
+#save-button:hover{
+    transform: scale(1.03);
+}
+.cancel-button{
+    margin-top: -8px;
+    font-size: 1.8rem;
+    color: black;
+    height: 35px;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.cancel-button:hover{
+    transform: scale(1.03);
+}

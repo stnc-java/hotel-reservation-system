@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color:azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    background: rgba(0,0,0,0.15);
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding-right: 40px;
+}
+.hotel-logo{
+    background-image: url(../assets/hotel-icon-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 30px;
+    height: 70px;
+    width: 70px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.nav-options > a{
+    color:black;;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.nav-options > a:hover{
+    display: inline-block;
+    transition: all 0.5s;
+    transform:scale(1.12);
+}
+.user-logo{
+    background-image: url(../assets/user-icon.png);
+    background-size: cover;
+    margin-left: 10px;
+    margin-right: -30px;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    display: inline-block;
+}
+main{
+    width: 60vw;
+    height: 60vh;
+    margin-top: 80px; 
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    border-radius: 15px;
+    background: rgba(0,100,100,0.05);
+    box-shadow: 0 0 50px rgba(200, 198, 198, 0.948);
+}
+.image-container{
+    background-image: url(../assets/travelers.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-top: 60px;
+    margin-left: 30px;
+    width: 40vw;
+    height: 40vh;
+}
+.presentation-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    margin-right: 50px;
+}
+.presentation-container h1{
+    text-align: center;
+    font-size: 6.4rem;
+    margin-top: 80px;
+}
+.presentation-container > a{
+    font-size: 1.8rem;
+    width: 200px;
+    color: whitesmoke;
+    height: 35px;
+    background-color:blue;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+.presentation-container > a:hover{
+    transform: scale(1.1);
+}

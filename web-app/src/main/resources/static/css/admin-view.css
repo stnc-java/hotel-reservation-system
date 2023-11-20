@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: whitesmoke;
+}
+body{
+    background-color:azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    background: rgba(0,0,0,0.15);
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding-right: 40px;
+}
+.hotel-logo{
+    background-image: url(../assets/hotel-icon-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 30px;
+    height: 70px;
+    width: 70px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.nav-options > a{
+    color:black;;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.nav-options > a:hover{
+    display: inline-block;
+    transition: all 0.5s;
+    transform:scale(1.12);
+}
+main{
+    width: 60vw;
+    height: 60vh;
+    margin-top: 90px; 
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    border-radius: 15px;
+    background: rgba(0,100,100,0.05);
+    box-shadow: 0 0 50px rgba(200, 198, 198, 0.948);
+}
+.image-container{
+    background-image: url(../assets/options.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-top: 60px;
+    margin-left: 80px;
+    width: 40vw;
+    height: 40vh;
+}
+.options-container{
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    margin-top: 45px;
+    margin-left: 40px;
+    width: 300px;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: blue;
+}
+.guest{
+    height: 200px;
+	margin-top: 90px;
+}
+h2{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: white; 
+}
+.options-container > a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    margin-top: 15px;
+    padding-top: 10px;
+    background-color: azure; 
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 0;
+    text-align: center;
+    transition: 0.5s;
+}
+.option:hover{
+    transform: scale(1.04);
+    border: 1px solid rgb(55, 99, 255);
+    box-shadow: 0 0 5px rgb(55, 99, 255);
+}
+

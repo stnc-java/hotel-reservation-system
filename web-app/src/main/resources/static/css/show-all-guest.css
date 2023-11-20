@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color:azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    background: rgba(0,0,0,0.15);
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding-right: 10px;
+}
+.hotel-logo{
+    background-image: url(../assets/hotel-icon-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 30px;
+    height: 70px;
+    width: 70px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.nav-options > a{
+    color:black;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.nav-options > a:hover{
+    display: inline-block;
+    transition: all 0.5s;
+    transform:scale(1.12);
+}
+main{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+caption{
+    text-align: left;
+    font-size: 6rem;
+    margin-bottom: 10px;
+    color: #0c1088;
+}
+.guest-table{
+    height: auto;
+    margin-top: 10px;
+    width: 90vw;
+    border-radius: 10px;
+    padding: 20px 10px 10px 10px;
+    background: rgba(0,100,100,0.05);
+    box-shadow: 0 0 50px rgba(200, 198, 198, 0.648);
+}
+th,td{
+    word-wrap: break-word;
+}
+th{
+    font-size: 1.8rem;
+}
+tr{
+    text-align: center;
+}
+td{
+    height: 30px;
+    border: 1px solid rgb(233, 227, 227);
+    font-size: 1.6rem;
+}
+.actions-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action{
+    display: inline-block;
+    background-size: cover;
+    height: 23px;
+    width: 23px;
+    margin-right: 6px;
+    margin-top: 4px;
+}
+.action:hover{
+    cursor: pointer;
+}
+.edit-button{
+    background-image: url(../assets/edit-icon.png);
+}
+.delete-button{
+    background-image: url(../assets/delete-icon.png);
+}
